@@ -1,4 +1,4 @@
-"category","year","COUNT(*)"
+"category","year","freq"
 "allergy","1999","231"
 "allergy","2000","89"
 "allergy","2001","983"
