@@ -1,0 +1,41 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "Temperature normals in Seattle. Derived from [Seattle Annual Temperate](https://vega.github.io/vega/examples/annual-temperature/) example from the Vega example gallery.",
+    "title": "Seattle Temperature Normals",
+    "data": {"url": "https://raw.githubusercontent.com/isha018/test-repo/main/testing-data/yearly_category_normalised.csv"},
+    "spacing": {"row": 1},
+    "facet": {
+      "row": {
+        "field": "category",
+        "type": "ordinal",
+        "header": {
+          "labelAngle": 0,
+          "labelPadding": 2,
+          "titlePadding": -4,
+          "labelAlign": "left",
+          "labelExpr": "datum.value"
+        }
+      }
+    },
+    "spec": {
+      "width": 800,
+      "height": 25,
+      "view": {"stroke": null},
+      "mark": "area",
+      "encoding": {
+        "x": {
+          "field": "year",
+          "type": "temporal",
+          "title": "Year"
+        },
+        "y": {
+          "field": "percent_of_recipes",
+          "type": "quantitative",
+          "scale": {"zero": false},
+          "axis": {"title": null, "labels": false, "ticks": false}
+        }
+      }
+    },
+    "config": {"axis": {"grid": false, "domain": false}}
+  }
+  
